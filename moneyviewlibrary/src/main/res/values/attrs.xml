@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--金额 样式  元大 角分小 $25.33-->
+    <declare-styleable name="MoneyView">
+        <!--金额-->
+        <attr name="money_text" format="string" />
+        <!--元颜色-->
+        <attr name="yuan_color" format="color" />
+        <!--元大小-->
+        <attr name="yuan_size" format="dimension" />
+        <!--分颜色-->
+        <attr name="cent_color" format="color" />
+        <!--分大小-->
+        <attr name="cent_size" format="dimension" />
+        <!--前缀文本-->
+        <attr name="prefix_text" format="string" />
+        <!--前缀大小-->
+        <attr name="prefix_size" format="dimension" />
+        <!--前缀颜色-->
+        <attr name="prefix_color" format="color" />
+        <!--前缀右边距-->
+        <attr name="prefix_padding" format="dimension" />
+        <!--小数点颜色-->
+        <attr name="point_color" format="color" />
+        <!--小数点大小-->
+        <attr name="point_size" format="dimension" />
+        <!--折颜色-->
+        <attr name="zhekou_color" format="color" />
+        <!--折大小-->
+        <attr name="zhekou_size" format="dimension" />
+        <!--小数点后位数-->
+        <attr name="point_places" format="string" />
+        <!--小数点左边距-->
+        <attr name="point_padding_left" format="dimension" />
+        <!--小数点右边距-->
+        <attr name="point_padding_right" format="dimension" />
+        <!--是否使用千分符-->
+        <attr name="grouping" format="boolean" />
+        <!--是否显示前缀-->
+        <attr name="prefix" format="boolean" />
+        <!--是否显示折-->
+        <attr name="zhekou" format="boolean" />
+    </declare-styleable>
+</resources>
