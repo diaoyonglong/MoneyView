@@ -7,8 +7,10 @@ buildscript {
         jcenter()
     }
     dependencies {
+        /**gradle*/
         classpath 'com.android.tools.build:gradle:3.0.1'
-        
+        /**github*/
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -39,15 +41,15 @@ ext {
     //用于Gradle编译项目的工具版本
     buildToolsVersion = "28.0.2"
     //应用ID
-    applicationId = "com.aoji.smartconsult"
+    applicationId = "com.diaoyonglong.moneyview"
     //最低支持Android版本
     minSdkVersion = 15
     //目标版本
     targetSdkVersion = 28
     //应用程序版本号
-    versionCode = 107
+    versionCode = 100
     //应用程序版本名称
-    versionName = "1.0.7"
+    versionName = "1.0.0"
     /**Dependencies（依赖关系）*/
     supportVersion = "28.0.0"
 }
