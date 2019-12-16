@@ -49,6 +49,5 @@
         money:zhekou="true"
         money:zhekou_color="@color/white" />
 
-
 </LinearLayout>
 
