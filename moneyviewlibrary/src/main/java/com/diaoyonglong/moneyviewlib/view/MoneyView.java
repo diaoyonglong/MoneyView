@@ -49,7 +49,7 @@ public class MoneyView extends View {
     private int mPointSize = sp2px(14);
     private int mCentSize = sp2px(14);
     private int mZheKouSize = sp2px(14);
-    private int mPrefixPadding = dp2px(4); //小数点与分的间隔
+    private int mPrefixPadding = dp2px(4); //前缀与分的间隔
     private int mPointPaddingLeft = dp2px(3); //小数点与分的间隔
     private int mPointPaddingRight = dp2px(4); //小数点与分的间隔
 
@@ -173,7 +173,7 @@ public class MoneyView extends View {
         mPaint.getTextBounds(mZheKou, 0, mZheKou.length(), mZheKouBound);
         //文本占据的宽度
         mTextWidth = mYuanBound.width() + mCentBound.width() + mPrefixBound.width() + mPointBound.width() + mZheKouBound.width()
-                + mPrefixPadding + mPointPaddingLeft + mPointPaddingRight;
+                + mPrefixPadding + mPointPaddingLeft + mPointPaddingRight + mPrefixPadding;
         // 设置宽度
         int specMode = MeasureSpec.getMode(widthMeasureSpec);
         int specSize = MeasureSpec.getSize(widthMeasureSpec);

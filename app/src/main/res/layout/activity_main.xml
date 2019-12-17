@@ -25,11 +25,11 @@
         money:yuan_color="@color/add_cart"
         money:yuan_size="33sp" />
 
-
     <com.diaoyonglong.moneyviewlib.view.MoneyView
         android:id="@+id/money_view_zhe"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="1dp"
         android:background="@color/colorPrimary"
         money:cent_color="@color/add_cart"
         money:cent_size="20sp"
@@ -48,6 +48,52 @@
         money:yuan_size="33sp"
         money:zhekou="true"
         money:zhekou_color="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/item_pay_wait_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/txt_pay_wait_pay_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="待支付---"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.diaoyonglong.moneyviewlib.view.MoneyView
+            android:id="@+id/txt_pay_wait_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            money:cent_color="@color/add_cart"
+            money:cent_size="13sp"
+            money:grouping="false"
+            money:money_text="7890.589"
+            money:point_color="@color/add_cart"
+            money:point_padding_left="2dp"
+            money:point_padding_right="2dp"
+            money:point_places="%.2f"
+            money:point_size="13sp"
+            money:prefix_color="@color/add_cart"
+            money:prefix_padding="2dp"
+            money:prefix_size="13sp"
+            money:prefix_text="¥"
+            money:yuan_color="@color/add_cart"
+            money:yuan_size="15sp" />
+
+    </RelativeLayout>
 
 </LinearLayout>
 
