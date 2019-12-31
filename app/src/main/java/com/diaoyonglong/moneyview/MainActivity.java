@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mPriceView = findViewById(R.id.money_view_price);
+        mPriceView.setYuanColor(R.color.black);
         mZheView = findViewById(R.id.money_view_zhe);
     }
 }

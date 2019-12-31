@@ -148,7 +148,7 @@ public class MoneyView extends View {
         if (mIsGroupingUsed) {
             mYuan = NumberFormat.getInstance().format(Long.valueOf(mYuan));
         }
-        //如果不是折扣
+        //如果不要前缀
         if (!mIsPrefix) {
             mPrefix = "";
         }
@@ -214,7 +214,7 @@ public class MoneyView extends View {
         //绘制前缀
         mPaint.setColor(mPrefixColor);
         mPaint.setTextSize(mPrefixSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         canvas.drawText(mPrefix, drawX, drawY, mPaint);
         //绘制元
         drawX += mPrefixBound.width() + mPrefixPadding;
@@ -232,13 +232,13 @@ public class MoneyView extends View {
         drawX += mPointBound.width() + mPointPaddingRight;
         mPaint.setColor(mCentColor);
         mPaint.setTextSize(mCentSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         canvas.drawText(mCent, drawX, drawY, mPaint);
         //绘制折
         drawX += mCentBound.width() + mPrefixPadding;
         mPaint.setColor(mZheKouColor);
         mPaint.setTextSize(mCentSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         canvas.drawText(mZheKou, drawX, drawY, mPaint);
 
     }
@@ -248,7 +248,7 @@ public class MoneyView extends View {
     }
 
     public void setMoneyText(String string) {
-        if (TextUtils.isEmpty(mMoneyText)) {
+        if (TextUtils.isEmpty(string)) {
             string = "0.00";
         }
         double money = Double.parseDouble(string.toString());
@@ -256,6 +256,51 @@ public class MoneyView extends View {
         mMoneyText = string;
         requestLayout();
         postInvalidate();
+    }
+
+    /**
+     * 设置前缀颜色
+     *
+     * @param color
+     */
+    public void setPrefixColor(int color) {
+        mPointColor = color;
+    }
+
+    /**
+     * 设置元颜色
+     *
+     * @param color
+     */
+    public void setYuanColor(int color) {
+        mYuanColor = color;
+    }
+
+    /**
+     * 设置点颜色
+     *
+     * @param color
+     */
+    public void setPointColor(int color) {
+        mPointColor = color;
+    }
+
+    /**
+     * 设置分颜色
+     *
+     * @param color
+     */
+    public void setCentColor(int color) {
+        mCentColor = color;
+    }
+
+    /**
+     * 设置折扣颜色
+     *
+     * @param color
+     */
+    public void setZheKouColorr(int color) {
+        mZheKouColor = color;
     }
 
     /**
