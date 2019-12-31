@@ -264,7 +264,7 @@ public class MoneyView extends View {
      * @param color
      */
     public void setPrefixColor(int color) {
-        mPointColor = color;
+        mPrefixColor = color;
     }
 
     /**
