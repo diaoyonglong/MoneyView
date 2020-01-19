@@ -1,6 +1,7 @@
 package com.diaoyonglong.moneyviewlib.view;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -64,6 +65,8 @@ public class MoneyView extends View {
     private Paint mPaint;
     //基线高度
     float maxDescent;
+    //字体
+    private Typeface TF1;
 
     public MoneyView(Context context) {
         this(context, null);
@@ -80,6 +83,11 @@ public class MoneyView extends View {
 
     private void init(Context context, AttributeSet attrs, int defStyle) {
         TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MoneyView, defStyle, 0);
+
+        //从asset 读取字体
+        AssetManager mgr = context.getAssets();
+        //根据路径得到Typeface
+        TF1 = Typeface.createFromAsset(mgr, "fonts/DINOT-Bold.ttf");//
 
         mMoneyText = typedArray.getString(R.styleable.MoneyView_money_text);
 
@@ -214,25 +222,25 @@ public class MoneyView extends View {
         //绘制前缀
         mPaint.setColor(mPrefixColor);
         mPaint.setTextSize(mPrefixSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        mPaint.setTypeface(TF1);
         canvas.drawText(mPrefix, drawX, drawY, mPaint);
         //绘制元
         drawX += mPrefixBound.width() + mPrefixPadding;
         mPaint.setColor(mYuanColor);
         mPaint.setTextSize(mYuanSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        mPaint.setTypeface(TF1);
         canvas.drawText(mYuan, drawX, drawY, mPaint);
         //绘制小数点
         drawX += mYuanBound.width() + mPointPaddingLeft;
         mPaint.setColor(mPointColor);
         mPaint.setTextSize(mPointSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        mPaint.setTypeface(TF1);
         canvas.drawText(mPoint, drawX, drawY, mPaint);
         //绘制分
         drawX += mPointBound.width() + mPointPaddingRight;
         mPaint.setColor(mCentColor);
         mPaint.setTextSize(mCentSize);
-        mPaint.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        mPaint.setTypeface(TF1);
         canvas.drawText(mCent, drawX, drawY, mPaint);
         //绘制折
         drawX += mCentBound.width() + mPrefixPadding;

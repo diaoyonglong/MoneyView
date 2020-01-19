@@ -13,7 +13,7 @@
         money:cent_color="@color/add_cart"
         money:cent_size="20sp"
         money:grouping="true"
-        money:money_text="7890.589"
+        money:money_text="47890.589"
         money:point_color="@color/colorAccent"
         money:point_padding_left="6dp"
         money:point_padding_right="6dp"
@@ -34,7 +34,7 @@
         money:cent_color="@color/add_cart"
         money:cent_size="20sp"
         money:grouping="true"
-        money:money_text="7.589"
+        money:money_text="7.389"
         money:point_color="@color/colorAccent"
         money:point_padding_left="6dp"
         money:point_padding_right="6dp"
@@ -94,6 +94,18 @@
             money:yuan_size="15sp" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_typeface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="字体样式  1234567890"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
 
 </LinearLayout>
 
