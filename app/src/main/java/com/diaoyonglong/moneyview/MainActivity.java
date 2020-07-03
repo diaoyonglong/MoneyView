@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //得到AssetManager
         AssetManager mgr = getAssets();
         //根据路径得到Typeface
-        TF1 = Typeface.createFromAsset(mgr, "fonts/DINOT-Bold.ttf");//
+        TF1 = Typeface.createFromAsset(mgr, "fonts/DIN-Medium.otf");//
 
         mPriceView = findViewById(R.id.money_view_price);
         mPriceView.setYuanColor(R.color.black);
@@ -36,4 +36,5 @@ public class MainActivity extends AppCompatActivity {
         mtxtTypeface = findViewById(R.id.txt_typeface);
         mtxtTypeface.setTypeface(TF1);
     }
+
 }

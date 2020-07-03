@@ -87,7 +87,7 @@ public class MoneyView extends View {
         //从asset 读取字体
         AssetManager mgr = context.getAssets();
         //根据路径得到Typeface
-        TF1 = Typeface.createFromAsset(mgr, "fonts/DINOT-Bold.ttf");//
+        TF1 = Typeface.createFromAsset(mgr, "fonts/DIN-Medium.otf");//
 
         mMoneyText = typedArray.getString(R.styleable.MoneyView_money_text);
 
